@@ -30,13 +30,18 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['page', 'page1', 'page2','page3','page4','page5','page6','page7','page8'],
-				slidesColor: ['#7E89FF', '#67E8B9', '#FFB05D','#E855B0','#EDFF71','#ab78ff', '#ffee6a','#ffd66a','#7E89FF'],
+				slidesColor: ['#7E89FF', '#67E8B9', '#FFB05D','#E855B0','#EDFF71','#ab78ff', '#f3a466','#ffd66a','#7E89FF'],
 				slidesNavigation: true,
 				afterLoad: function(anchorLink, index){
 				
 					//section 2
 					if(index == '4'){
 		                $('.animation-p').effect('slide',3000);
+		            }else if(index == '6'){
+		            	$('.botao-exemplo').click(function(){
+		            		$('.efeito-slide').effect('slide');
+		            		console.log($('.efeito-slide'));
+		            	});
 		            }
 					
 				}
@@ -129,17 +134,32 @@
 	<div class="section" id="section4">
 		<div class="intro">
 			<h1>Componentes</h1>
-			
+			<img style="width:566px;" src="img/componentes1.png"><img src="img/componentes2.png">
 		</div>
 	</div>
 	<div class="section" id="section5">
 		<div class="intro">
-			<h1>Implementação</h1>
+			<div class="efeito-slide">
+				<h1>Implementação</h1>
+				<p>Chamando a biblioteca</p>
+				<img src="img/chamada-jqueryui.png">
+				<p>Criando um efeito</p>
+				<img src="img/implementando.png">
+				<p>Elemento id</p>
+				<img src="img/div.png">
+			</div>
+			<button class="botao-exemplo">Exemplo do efeito</button>
+
 		</div>
 	</div>
 	<div class="section" id="section6">
 		<div class="intro">
-			<h1>DOM</h1>
+			<h1 style="color:#000">DOM</h1>
+			<p>Document Object Model</p>
+			<p style="text-align:left"><b>Criado pelo W3C</b> O DOM é uma multi-plataforma que representa como as marcações em HTML, XHTML e XML são organizadas e lidas pelo navegador que você usa.</p><br />
+			<p style="text-align:left"><b>Uma arvore API</b> – que é o que fazemos quando usamos programas ou scripts para alterar funcionalidades de uma página: conteudo, estrutura ou folha de estilo.</p><br />
+			<p style="text-align:left">Basicamento o DOM é toda uma estrutura formada pelo html veja uma demonstração.</p><br />
+			<img src="img/dom.png">
 		</div>
 	</div>
 	<div class="section" id="section7">

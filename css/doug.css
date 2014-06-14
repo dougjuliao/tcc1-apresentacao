@@ -144,3 +144,20 @@ a:hover.tooltips span {
   margin-left: -76px;
   z-index: 999;
 }
+/*--Estilo do botão exemplo jquery ui--*/
+.botao-exemplo{
+  border:1px solid #ccc;
+  background-color:#655DBE;
+  color:#fff;
+  padding:5px;
+  width:150px;
+  margin:10px auto;
+
+}
+.botao-exemplo:hover{
+  background-color:#4F498D;
+}
+.botao-exemplo:active{
+  background-color:#ccc;
+  color:#000;
+};
