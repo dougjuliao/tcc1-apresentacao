@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Demonstração do jQueryUI utilizando Single Page Application</title>
+	<meta name="author" content="Douglas Julião Marques" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/doug.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>	
+
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['page', 'page1', 'page2','page3','page4','page5','page6','page7','page8'],
+				slidesColor: ['#7E89FF', '#67E8B9', '#FFB05D','#E855B0','#EDFF71','#ab78ff', '#ffee6a','#ffd66a','#7E89FF'],
+				slidesNavigation: true,
+				afterLoad: function(anchorLink, index){
+				
+					//section 2
+					if(index == '4'){
+		                $('.animation-p').effect('slide',3000);
+		            }
+					
+				}
+				
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<div class="intro">
+			<img class="apresentacao" src="img/jqueryui-spa.png" height="173" width="619"  alt="1"/>
+			<h1></h1>
+			<p class="douglas">
+				Douglas Julião Marques
+			</p>
+		</div>
+	</div>
+	<div class="section " id="section1">
+		<div class="intro">
+			<h1>Sumário</h1>
+			<div id="top" class="menu">
+		      <ul class="blur-menu" id="menu_ul">
+		       <!--<li><a class="active" href="#">Animate</a></li>-->
+		       <li><a href="#page2">Introdução</a></li>
+		       <li><a href="#page3">jQuery UI</a></li>
+		       <li><a href="#page4">Componentes</a></li>
+		       <li><a href="#page5">Implementação</a></li>
+		       <li><a href="#page6">DOM</a></li>
+		    </ul>
+		  </div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<h1>Objetivo</h1>
+				<p style="text-align:justify;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+		</div>
+		
+	    <div class="slide" id="slide2" data-anchor="slide2">
+		    <div class="intro">
+				<h1>Justificativa</h1>
+				<p style="text-align:justify;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+		</div>
+		
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="intro">
+				<h1>Viabilidade</h1>
+				<p style="text-align:justify;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>	
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<span class="shadow-frame alignleft jqueryui-img">
+			  	<img class="framed" src="img/559px-JQuery_UI_Logo.svg.png" width="559px" height="133px" alt="" />
+			</span>
+			<p class="animation-p" style="font-size:27px; margin-top:10px; display:none;">"Escrever menos, fazer mais"</p>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Componentes</h1>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<h1>Implementação</h1>
+		</div>
+	</div>
+	<div class="section" id="section6">
+		<div class="intro">
+			<h1>DOM</h1>
+		</div>
+	</div>
+	<div class="section" id="section7">
+		<div class="intro">
+			<h1>Ferramentas Utilizadas</h1>
+			<img src="img/edge_code_htmlcssjs.png" height="189" width="501" />
+		</div>
+	</div>
+	<div class="section" id="section8">
+		<div class="intro">
+			<h1>Obrigado! :)</h1>
+			<p>Perguntas?</p>
+		</div>
+	</div>
+	<div class="voltar-menu" style="font-size:30px; position:fixed; right:50px; bottom:10px;"><a class="tooltips" href="#page1">▲<span>Sumário</span></a></div>
+</div>
+
+
+</body>
+</html>
