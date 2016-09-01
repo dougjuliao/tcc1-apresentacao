@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Demonstração do jQueryUI utilizando Single Page Application</title>
+	<meta name="author" content="Douglas Julião Marques" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/doug.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>	
+
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.botao-exemplo').click(function(){
+        		var $efeito = $('.efeito-slide');
+        		$efeito.effect('slide');
+        		console.log($efeito);
+        	});
+			$('#fullpage').fullpage({
+				anchors: ['page', 'page1', 'page2','page3','page4','page5','page6','page7','page8'],
+				slidesColor: ['#7BAABE', '#8890C8', '#82CEA0','#7BAABE', '#8890C8', '#82CEA0','#7BAABE', '#8890C8', '#82CEA0'],
+				slidesNavigation: true,
+				'scrollOverflow': true,
+				afterLoad: function(anchorLink, index){
+				
+					//section 2
+					if(index == '4'){
+		                $('.animation-p').effect('slide',3000);
+		            }
+					
+				}
+				
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<div class="intro">
+			<img class="apresentacao" src="img/jqueryui-spa.png" height="173" width="619"  alt="1"/>
+			<h1></h1>
+			<p class="douglas">
+				Douglas Julião Marques
+			</p>
+		</div>
+	</div>
+	<div class="section " id="section1">
+		<div class="intro">
+			<h1>Sumário</h1>
+			<div id="top" class="menu">
+		      <ul class="blur-menu" id="menu_ul">
+		       <!--<li><a class="active" href="#">Animate</a></li>-->
+		       <li><a href="#page2">Introdução</a></li>
+		       <li><a href="#page3">jQuery UI</a></li>
+		       <li><a href="#page4">Componentes</a></li>
+		       <li><a href="#page5">Implementação</a></li>
+		       <li><a href="#page6">DOM</a></li>
+		    </ul>
+		  </div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<h1>Objetivo</h1>
+				<p style="text-align:justify;">
+					O objetivo do projeto é o desenvolvimento completo de um Single Page Application,
+					usando a biblioteca javaScript jquery e Apresentar o jquery UI.
+				</p>
+			</div>
+		</div>
+		
+	    <div class="slide" id="slide2" data-anchor="slide2">
+		    <div class="intro">
+				<h1>Justificativa</h1>
+				<p style="text-align:justify;">
+					<b style="font-size: 30px;">Single Page Application:</b> Essa nova aplicação web nos permite ter uma página mais sofisticada, agradável, rápida e moderna.<br />
+					
+					<b style="font-size: 30px;">jQueryUI:</b> A biblioteca javascript User Interface, com o jquery UI as interações com usuário e site acabam se tornando mais fáceis e completas.
+					
+				</p>
+			</div>
+		</div>
+		
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="intro">
+				<h1>Viabilidade</h1>
+				<p style="text-align:justify;">
+					Editores, bibliotecas, html5, css3, javascript...
+
+				</p>
+			</div>	
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="slide" id="slide1" data-anchor="slide2">
+			<div class="intro">
+				<span class="shadow-frame alignleft jqueryui-img">
+				  	<img class="framed" src="img/559px-JQuery_UI_Logo.svg.png" width="559px" height="133px" alt="" />
+				</span>
+				<p class="animation-p" style="font-size:27px; margin-top:10px; display:none;">"Escrever menos, fazer mais"</p>
+			</div>
+		</div>
+		<div class="slide" id="slide2" data-anchor="slide2">
+		    <div class="intro">
+				<h1>jQuery UI o nascimento</h1>
+				<p style="text-align:justify;">
+					 Criada no dia 1º de julho de 2007, por um grupo de desenvolvedores web gerenciado por Richard D. Worth diretor executivo da jQuery Foundation.
+					 De acordo com Mauricio Sammy Silva "jqueryUI é a biblioteca para a biblioteca jQuery".
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Componentes</h1>
+			<!--tabela imagem-->
+			<!--<img style="width:566px;" src="img/componentes1.png"><img src="img/componentes2.png">-->
+			<!--tabela de componentes-->
+			<table class="zebra">
+				<thead>
+		        	<tr>
+						<th>Grupo</th>
+						<th>Nome</th>
+						<th>Descrição</th>
+		            </tr>
+				</thead>
+		        <tbody>
+		            <tr>
+		                <td  style="background-color:#fff; color:#000" rowspan="6">Componentes</td>
+		            </tr>
+		        	<tr style="background-color:#fff; color:#000" rowspan="10">
+		                <td>Draggable (Arrastar)</td>
+		                <td>Cria elementos capazes de serem arrastados pela interface.</td>
+		            </tr>
+		            <tr style="background-color:#fff; color:#000" rowspan="10">
+		                <td>Droppable (Soltar)</td>
+		                <td>Cria elementos para receber os elementos arrastáveis</td>
+		            </tr>
+		            <tr style="background-color:#fff; color:#000" rowspan="10">
+		                <td>Resizable (Dimensionar)</td>
+		                <td>Cria elementos cujas dimensões podem ser controladas pelo usuário</td>
+		            </tr>
+		            <tr style="background-color:#fff; color:#000" rowspan="10">
+		                <td>Selectable (Selecionar)</td>
+		                <td>Cria elementos que possam ser selecionados pelo usuário, quer individualmente quer em grupos.</td>
+		            </tr>
+		            <tr style="background-color:#fff; color:#000" rowspan="10">
+		                <td>Sortable (Ordenar)</td>
+		                <td>Cria elementos que possam ser ordenados pelo usuário com ação de arrastar e soltar.</td>
+		            </tr>
+		            <tr>
+		                <td rowspan="9">Widgets</td>
+		            </tr>
+		            <tr>
+		                <td>Accordion (Acordeão)</td>
+		                <td>Cria o efeito acordeão, para ocultar/mostrar conteúdos</td>
+		            </tr>
+		            <tr>
+		                <td>Auto complete(Autocompletamento)</td>
+		                <td>Apresenta ao usuário uma lista de sugestões de palavras à medida que ele digita em um campo de texto</td>
+		            </tr>
+		            <tr>
+		                <td>Button (Botão)</td>
+		                <td>Cria de vários tipos de botão.</td>
+		            </tr>
+		            <tr>
+		                <td>Datepicker (Seletor de datas)</td>
+		                <td>Cria uma janela popup para seleção da data a ser digitada em um campo destinado a coletar uma data</td>
+		            </tr>
+		            <tr>
+		                <td>Dialog (Janela de diálogo)</td>
+		                <td>Cria vários tipos de janela de diálogo, entre elas janelas modais.</td>
+		            </tr>
+		            <tr>
+		                <td>Progressbar(Barra de Progresso)</td>
+		                <td>Cria uma barra indicativa do andamento de uma tarefa</td>
+		            </tr>
+		            <tr>
+		                <td>Slider (Controle deslizante)</td>
+		                <td>Cria um botão arrastável em uma guia para seleção de um valor compreendido em determinada faixa.</td>
+		            </tr>
+		            <tr>
+		                <td>Tabs (Abas)</td>
+		                <td>Cria uma interface cuja navegação é feita com o uso de abas.</td>
+		            </tr>
+		            <tr>
+		                <td style="background-color:#fff; color:#000" rowspan="10">Efeitos</td>
+		            </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Color Animation</td>
+		               <td>Esse efeito destina-se a animar as cores de um elemento.</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Toggle class</td>
+		               <td rowspan="4">Esses efeitos destinam-se a animar elementos baseados na manipulação dos seus atributos classe.</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Add class</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Remove class</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Switch class</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Effect</td>
+		               <td>Aplica em um elemento uma série de efeitos de animação padrão da biblioteca jQuery, tais como os efeitos de esmaecimento, pulsação, balanço, sacudir etc</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Toggle</td>
+		               <td>Aplica um dos efeitos padrão da biblioteca jQuery com a finalidade de alternar entre ocultar e esconder um conteúdo</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Hide</td>
+		               <td>Efeito destinado a ocultar um conteúdo.</td>
+		           </tr>
+		           <tr style="background-color:#fff; color:#000" rowspan="10">
+		               <td>Show</td>
+		               <td>Efeito destinado a mostrar um conteúdo.</td>
+		           </tr>
+		           <tr>
+		               <td rowspan="3">Utilidades</td>
+		           </tr>
+		           <tr>
+		               <td>Position</td>
+		               <td>Destina-se a controlar e manipular o posicionamento de elementos na interface.</td>
+		           </tr>
+		           <tr>
+		               <td>Widgets</td>
+		               <td>Destina-se à criação de widgets personalizados.</td>
+		           </tr>
+		        </tbody>
+			</table>
+			<p style="padding-bottom:30px;"></p>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<div class="efeito-slide">
+				<h1>Implementação</h1>
+				<p>Chamando a biblioteca</p>
+				<img class="codigo-ex" src="img/chamada-jqueryui.png">
+				<p>Criando um efeito</p>
+				<img class="codigo-ex" src="img/implementando.png">
+				<p>Elemento id</p>
+				<img class="codigo-ex" src="img/div.png">
+			</div>
+			<button class="botao-exemplo">Exemplo do efeito</button>
+
+		</div>
+	</div>
+	<div class="section" id="section6">
+		<div class="intro">
+			<h1 style="color:#000">DOM</h1>
+			<p>Document Object Model</p>
+			<p><b>Criado pelo W3C</b> O DOM é uma multi-plataforma que representa como as marcações em HTML, XHTML e XML são organizadas e lidas pelo navegador que você usa.</p><br />
+			<p><b>Uma arvore API</b> – que é o que fazemos quando usamos programas ou scripts para alterar funcionalidades de uma página: conteudo, estrutura ou folha de estilo.</p><br />
+			<p>Basicamento o DOM é toda uma estrutura formada pelo html veja uma demonstração.</p><br />
+			<img class="dom" src="img/dom.png">
+		</div>
+	</div>
+	<div class="section" id="section7">
+		<div class="intro">
+			<h1>Ferramentas Utilizadas</h1>
+			<img src="img/edge_code_htmlcssjs.png" height="189" width="501" />
+		</div>
+	</div>
+	<div class="section" id="section8">
+		<div class="intro">
+			<h1>Obrigado! :)</h1>
+			<p>Perguntas?</p>
+		</div>
+	</div>
+	<div class="voltar-menu" style="font-size:30px; position:fixed; right:50px; bottom:10px;"><a class="tooltips" href="#page1">▲<span>Sumário</span></a></div>
+</div>
+
+
+</body>
+</html>
